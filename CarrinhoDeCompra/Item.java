@@ -35,10 +35,8 @@ public class Item
         return this.preco;
     }
 
-    public int setQuantidade()
+    public int getQuantidade()
     {
         return this.quantidade;
     }
-
-
 }
