@@ -12,7 +12,7 @@ public class CarrinhoDeCompras
 
     public void adicionarItem(String nome, double preco, int quantidade)
     {
-        carrinho.add(new Tarefa(nome, preco, quantidade));
+        carrinho.add(new Item(nome, preco, quantidade));
     }
     public void adicionarItem(Item i)
     {
@@ -30,7 +30,7 @@ public class CarrinhoDeCompras
     }
     public double calcularValorTotal()
     {
-        double res;
+        double res = 0.0;
         for(Item i: carrinho)
         {
             res += i.getPreco() * i.getQuantidade();
