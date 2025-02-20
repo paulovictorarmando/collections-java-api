@@ -22,7 +22,5 @@ public class Main{
         System.out.println("\n\n +++++ DEPOIS DE ADD WC ++++++");
         tarefa.obeterDescricoes();
         System.out.println("Total 4 : "+tarefa.totalTarefas());
-
-
     }
 }
