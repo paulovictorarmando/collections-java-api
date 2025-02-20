@@ -1,15 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
+
 public class SomaNumeros
 {
-
-    /**
-     * adicionarNumero(int numero): Adiciona um número à lista de números.
-     * calcularSoma(): Calcula a soma de todos os números na lista e retorna o resultado.
-     * encontrarMaiorNumero(): Encontra o maior número na lista e retorna o valor.
-     * encontrarMenorNumero(): Encontra o menor número na lista e retorna o valor.
-     * exibirNumeros(): Retorna uma lista contendo todos os números presentes na lista.
-     */
     private List<Integer> numeros;
 
     public SomaNumeros()
@@ -20,8 +13,10 @@ public class SomaNumeros
     {
         numeros.add(numero);
     }
-    public int calcularSoma()
+    public Integer calcularSoma()
     {
+        if(numeros.isEmpty())
+            return null;
         int res = 0;
         for(Integer i: numeros)
         {
@@ -29,12 +24,38 @@ public class SomaNumeros
         }
         return res;
     }
-    public int encontrarMaiorNumero()
+    public Integer encontrarMaiorNumero()
     {
         if(numeros.isEmpty())
             return null;
-        int maior = numero[0];
-            
-    }
+        int maior = numeros.get(0);
 
+        for(Integer i: numeros)
+        {
+            if (i > maior)
+                maior = i;
+        }
+        return maior;
+
+    }
+    public Integer encontrarMenorNumero()
+    {
+        if(numeros.isEmpty())
+            return null;
+        int menor = numeros.get(0);
+
+        for(Integer i: numeros)
+        {
+            if (i < menor)
+                menor = i;
+        }
+        return menor;
+    }
+    public void exibirNumeros()
+    {
+        for(Integer i: numeros)
+        {
+            System.out.println(i);
+        }
+    }
 }
